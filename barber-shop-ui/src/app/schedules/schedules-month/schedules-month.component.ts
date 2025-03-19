@@ -9,11 +9,12 @@ import { SnackbarManagerService } from '../../services/snackbar-manager.service'
 import { Subscription } from 'rxjs';
 import { ClientScheduleAppointmentModel, SaveScheduleModel, ScheduleAppointementMonthModel, SelectClientModel } from '../schedule.models';
 import { SaveScheduleRequest } from '../../services/api-client/schedules/schedule.models';
+import { ScheduleCalendarComponent } from '../components/schedule-calendar/schedule-calendar.component';
 
 @Component({
   selector: 'app-schedules-month',
   standalone: true,
-  imports: [],
+  imports: [ScheduleCalendarComponent],
   templateUrl: './schedules-month.component.html',
   styleUrl: './schedules-month.component.scss',
   providers: [
