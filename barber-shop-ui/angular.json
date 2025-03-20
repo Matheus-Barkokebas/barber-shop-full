@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "barber-shop": {
+    "angular-teste": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/barber-shop",
+            "outputPath": "dist/angular-teste",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -48,8 +48,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kB",
-                  "maximumError": "4kB"
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all"
@@ -66,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "barber-shop:build:production"
+              "buildTarget": "angular-teste:build:production"
             },
             "development": {
-              "buildTarget": "barber-shop:build:development"
+              "buildTarget": "angular-teste:build:development"
             }
           },
           "defaultConfiguration": "development"

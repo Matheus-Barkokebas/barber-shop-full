@@ -16,13 +16,12 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
-import { MatTimepickerModule } from '@dhutaryan/ngx-mat-timepicker';
+import { MatTimepickerModule } from '@angular/material/timepicker';
 import { YesNoDialogComponent } from '../../../commons/components/yes-no-dialog/yes-no-dialog.component';
 import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-schedule-calendar',
-  standalone: true,
   imports: [
     CommonModule,
     FormsModule,

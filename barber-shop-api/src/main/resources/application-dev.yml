@@ -6,6 +6,6 @@ spring:
         format_sql: true
   devtools:
     remote:
-      secret: 123
+      secret: "123"
     restart:
       trigger-file: trigger.txt

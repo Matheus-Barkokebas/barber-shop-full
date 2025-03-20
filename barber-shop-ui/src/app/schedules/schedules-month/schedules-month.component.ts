@@ -1,4 +1,5 @@
 import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
+import { ScheduleCalendarComponent } from '../components/schedule-calendar/schedule-calendar.component';
 import { SERVICES_TOKEN } from '../../services/service.token';
 import { IScheduleService } from '../../services/api-client/schedules/ischedules.service';
 import { ICLientService } from '../../services/api-client/clients/iclients.service';
@@ -9,7 +10,6 @@ import { SnackbarManagerService } from '../../services/snackbar-manager.service'
 import { Subscription } from 'rxjs';
 import { ClientScheduleAppointmentModel, SaveScheduleModel, ScheduleAppointementMonthModel, SelectClientModel } from '../schedule.models';
 import { SaveScheduleRequest } from '../../services/api-client/schedules/schedule.models';
-import { ScheduleCalendarComponent } from '../components/schedule-calendar/schedule-calendar.component';
 
 @Component({
   selector: 'app-schedules-month',
