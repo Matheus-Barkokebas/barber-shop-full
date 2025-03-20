@@ -47,24 +47,24 @@ public class ClientController {
 	}
 
 	@PutMapping("{id}")
-	UpdateClientResponse update(@PathVariable final long id, @RequestBody @Valid final UpdateClientRequest request) {
-		var entity = mapper.toEntity(id, request);
-		service.update(entity);
-		return mapper.toUpdateResponse(entity);
+	UpdateClientResponse update(@PathVariable("id") final long id, @RequestBody @Valid final UpdateClientRequest request) {
+	    var entity = mapper.toEntity(id, request);
+	    service.update(entity);
+	    return mapper.toUpdateResponse(entity);
 	}
 
 	@DeleteMapping("{id}")
 	@ResponseStatus(NO_CONTENT)
-	void delete(@PathVariable final long id) {
-		service.delete(id);
+	void delete(@PathVariable("id") final long id) {
+	    service.delete(id);
 	}
 
 	@GetMapping("{id}")
-	ClientDetailResponse findById(@PathVariable final long id) {
-		var entity = queryService.findById(id);
-		return mapper.toDetailResponse(entity);
+	ClientDetailResponse findById(@PathVariable("id") final long id) {
+	    var entity = queryService.findById(id);
+	    return mapper.toDetailResponse(entity);
 	}
-
+	
 	@GetMapping
 	List<ListClientResponse> list() {
 		var entities = queryService.list();

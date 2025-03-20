@@ -43,12 +43,12 @@ public class ScheduleController {
 
     @DeleteMapping("{id}")
     @ResponseStatus(NO_CONTENT)
-    void delete(@PathVariable final long id){
+    void delete(@PathVariable("id") final long id){
         service.delete(id);
     }
 
     @GetMapping("{year}/{month}")
-    ScheduleAppointmentMonthResponse listMonth(@PathVariable final int year, @PathVariable final int month){
+    ScheduleAppointmentMonthResponse listMonth(@PathVariable("year") final int year, @PathVariable("month") final int month){
         var yearMonth = YearMonth.of(year, month);
         var startAt = yearMonth.atDay(1)
                 .atTime(0, 0, 0, 0)
